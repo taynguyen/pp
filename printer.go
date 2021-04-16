@@ -394,13 +394,13 @@ func (p *printer) raw() string {
 	case reflect.Uint, reflect.Uintptr:
 		return fmt.Sprintf("%#v", p.value.Uint())
 	case reflect.Uint8:
-		return fmt.Sprintf("0x%02x", p.value.Uint())
+		return fmt.Sprintf("%d", p.value.Uint())
 	case reflect.Uint16:
-		return fmt.Sprintf("0x%04x", p.value.Uint())
+		return fmt.Sprintf("%d", p.value.Uint())
 	case reflect.Uint32:
-		return fmt.Sprintf("0x%08x", p.value.Uint())
+		return fmt.Sprintf("%d", p.value.Uint())
 	case reflect.Uint64:
-		return fmt.Sprintf("0x%016x", p.value.Uint())
+		return fmt.Sprintf("%d", p.value.Uint())
 	case reflect.Float32, reflect.Float64:
 		return fmt.Sprintf("%f", p.value.Float())
 	case reflect.Complex64, reflect.Complex128:
